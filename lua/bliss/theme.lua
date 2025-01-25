@@ -51,7 +51,7 @@ theme.loadSyntax = function()
         markdownH3Delimiter = { fg = bliss.bliss14_gui },
     }
 
-    syntax.Comment = { fg = bliss.comments }
+    syntax.Comment = { fg = bliss.comments, style = "italic" }
     syntax.Conditional = { fg = bliss.bliss11_gui } -- normal if, then, else, endif, switch, etc.
     syntax.Keyword = { fg = bliss.bliss11_gui }     -- normal for, do, while, etc.
     syntax.Repeat = { fg = bliss.bliss11_gui }      -- normal any other keyword
