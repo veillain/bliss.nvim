@@ -18,18 +18,6 @@ local defaults = {
         visual = false,
         search = false,
     },
-    plugins = {
-        cmp = true,
-        treesitter = true,
-        treesitter_context = true,
-        lspsaga = true,
-        trouble = true,
-        lazy = true,
-        blink_cmp = true,
-        gitsigns = true,
-        snacks = true,
-        hipatterns = true,
-    },
 }
 
 local function extend(table1, table2)
@@ -49,12 +37,12 @@ local function reset_cache()
     local cache_path = table.concat({ vim.fn.stdpath("state"), "bliss", "compiled.lua" }, PATH_SEP)
     local ok, err = vim.loop.fs_unlink(cache_path)
     if not ok and err and err:match("^ENOENT") == nil then
-        vim.notify("Morta: Error deleting cache: " .. err, vim.log.levels.WARN)
+        vim.notify("Bliss: Error deleting cache: " .. err, vim.log.levels.WARN)
     end
 end
 
--- Create the MortaResetCache command
-vim.api.nvim_create_user_command("MortaResetCache", function()
+-- Create the BlissResetCache command
+vim.api.nvim_create_user_command("BlissResetCache", function()
     reset_cache()
     -- Recompile the theme after cache reset
     if M.config and M.config.use_compiled then
@@ -63,7 +51,7 @@ vim.api.nvim_create_user_command("MortaResetCache", function()
         compiler.compile(palette.colors, M.config)
         compiler.load_compiled()
     end
-    vim.notify("Morta: Cache has been reset and recompiled", vim.log.levels.INFO)
+    vim.notify("Bliss: Cache has been reset and recompiled", vim.log.levels.INFO)
 end, {})
 
 function M.setup(opts)
@@ -106,10 +94,6 @@ function M.load_dynamic()
     end
 end
 
----@param plugin string
 ---@return boolean
-function M.plugin_enabled(plugin)
-    return M.config and M.config.plugins and M.config.plugins[plugin] == true
-end
 
 return M
