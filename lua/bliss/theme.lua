@@ -9,14 +9,14 @@ theme.loadSyntax = function()
         StorageClass = { fg = bliss.bliss9_gui },                                  -- static, register, volatile, etc.
         Structure = { fg = bliss.bliss9_gui },                                     -- struct, union, enum, etc.
         Constant = { fg = bliss.bliss4_gui },                                      -- any constant
-        String = { fg = bliss.bliss14_gui, bg = bliss.none, style = 'italic' },    -- Any string
-        Character = { fg = bliss.bliss14_gui },                                    -- any character constant: 'c', '\n'
+        String = { fg = bliss.bliss10_gui, bg = bliss.none, style = 'italic' },    -- Any string
+        Character = { fg = bliss.bliss10_gui },                                    -- any character constant: 'c', '\n'
         Number = { fg = bliss.bliss15_gui },                                       -- a number constant: 5
         Boolean = { fg = bliss.bliss9_gui },                                       -- a boolean constant: TRUE, false
         Float = { fg = bliss.bliss15_gui },                                        -- a floating point constant: 2.3e10
         Statement = { fg = bliss.bliss9_gui },                                     -- any statement
         Label = { fg = bliss.bliss9_gui },                                         -- case, default, etc.
-        Operator = { fg = bliss.bliss9_gui },                                      -- sizeof", "+", "*", etc.
+        Operator = { fg = bliss.bliss8_gui },                                      -- sizeof", "+", "*", etc.
         Exception = { fg = bliss.bliss9_gui },                                     -- try, catch, throw
         PreProc = { fg = bliss.bliss9_gui },                                       -- generic Preprocessor
         Include = { fg = bliss.bliss9_gui },                                       -- preprocessor #include
