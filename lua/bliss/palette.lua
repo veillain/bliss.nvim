@@ -23,13 +23,13 @@ M.colors = {
     selection = "#262727",
 
     -- Syntax highlighting - 
-    string = "#9DDEAF",
-    keyword = "#DE9DAC",
-    func = "#9DACDE",
+    string = "#DED09D",
+    keyword = "#9DDEAF",
+    func = "#9DDEAF",
     constant = "#DED09D",
     type = "#9DCCDE",
-    variable = "#F0D3C9",
-    comment = "#434545",
+    variable = "#E0E2EA",
+    comment = "#635050",
 
     -- Special highlights - 
     warning = "#DED09D",
