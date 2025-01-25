@@ -11,8 +11,8 @@ theme.loadSyntax = function()
         Constant = { fg = bliss.bliss4_gui },                                      -- any constant
         String = { fg = bliss.bliss10_gui, bg = bliss.none, style = 'italic' },    -- Any string
         Character = { fg = bliss.bliss10_gui },                                    -- any character constant: 'c', '\n'
-        Number = { fg = bliss.bliss15_gui },                                       -- a number constant: 5
-        Boolean = { fg = bliss.bliss9_gui },                                       -- a boolean constant: TRUE, false
+        Number = { fg = bliss.bliss10_gui },                                       -- a number constant: 5
+        Boolean = { fg = bliss.bliss11_gui },                                      -- a boolean constant: TRUE, false
         Float = { fg = bliss.bliss15_gui },                                        -- a floating point constant: 2.3e10
         Statement = { fg = bliss.bliss9_gui },                                     -- any statement
         Label = { fg = bliss.bliss9_gui },                                         -- case, default, etc.
@@ -24,10 +24,10 @@ theme.loadSyntax = function()
         Macro = { fg = bliss.bliss9_gui },                                         -- same as Define
         Typedef = { fg = bliss.bliss9_gui },                                       -- A typedef
         PreCondit = { fg = bliss.bliss13_gui },                                    -- preprocessor #if, #else, #endif, etc.
-        Special = { fg = bliss.bliss4_gui },                                       -- any special symbol
+        Special = { fg = bliss.bliss9_gui },                                       -- any special symbol
         SpecialChar = { fg = bliss.bliss13_gui },                                  -- special character in a constant
         Tag = { fg = bliss.bliss4_gui },                                           -- you can use CTRL-] on this
-        Delimiter = { fg = bliss.bliss6_gui },                                     -- character that needs attention like , or .
+        Delimiter = { fg = bliss.bliss9_gui },                                     -- character that needs attention like , or .
         SpecialComment = { fg = bliss.bliss8_gui },                                -- special things inside a comment
         Debug = { fg = bliss.bliss11_gui },                                        -- debugging statements
         Underlined = { fg = bliss.link, bg = bliss.none, style = 'underline' },    -- text that stands out, HTML links
