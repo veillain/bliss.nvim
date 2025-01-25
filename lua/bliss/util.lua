@@ -1,45 +1,95 @@
-local M = {}
+local util = {}
+local bliss = require('bliss.theme')
 
----Convert hex color to RGB
----@param hex_str string
----@return number, number, number
-local function hex_to_rgb(hex_str)
-    local hex = hex_str:gsub("#", "")
-    return tonumber(hex:sub(1, 2), 16), tonumber(hex:sub(3, 4), 16), tonumber(hex:sub(5, 6), 16)
+-- Go trough the table and highlight the group with the color values
+util.highlight = function(group, color)
+    local style = color.style and "gui=" .. color.style or "gui=NONE"
+    local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
+    local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
+    local sp = color.sp and "guisp=" .. color.sp or ""
+
+    local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
+
+    vim.cmd(hl)
+    if color.link then vim.cmd("highlight! link " .. group .. " " .. color.link) end
 end
 
----Convert RGB to hex color
----@param r number
----@param g number
----@param b number
----@return string
-local function rgb_to_hex(r, g, b)
-    return string.format("#%02x%02x%02x", r, g, b)
+-- Only define bliss if it's the active colorscheme
+function util.onColorScheme()
+    if vim.g.colors_name ~= "bliss" then
+        vim.cmd [[autocmd! bliss]]
+        vim.cmd [[augroup! bliss]]
+    end
 end
 
----Blend foreground color with background color
----@param fg string foreground color
----@param alpha number blend amount (0-1)
----@param bg? string background color, defaults to black
----@return string
-function M.blend(fg, alpha, bg)
-    bg = bg or "#000000"
-    local fg_r, fg_g, fg_b = hex_to_rgb(fg)
-    local bg_r, bg_g, bg_b = hex_to_rgb(bg)
+-- Change the background for the terminal, packer and qf windows
+util.contrast = function()
+    vim.cmd [[augroup bliss]]
+    vim.cmd [[  autocmd!]]
+    vim.cmd [[  autocmd ColorScheme * lua require("bliss.util").onColorScheme()]]
+    vim.cmd [[  autocmd TermOpen * setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]]
+    vim.cmd [[  autocmd FileType packer setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]]
+    vim.cmd [[  autocmd FileType qf setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]]
+    vim.cmd [[augroup end]]
+end
 
-    local function blend_channel(fg, bg)
-        return math.floor(fg * alpha + bg * (1 - alpha))
+-- Load the theme
+function util.load()
+    -- Set the theme environment
+    vim.cmd("hi clear")
+    if vim.fn.exists("syntax_on") then vim.cmd("syntax reset") end
+    vim.o.background = "dark"
+    vim.o.termguicolors = true
+    vim.g.colors_name = "bliss"
+
+    -- Load plugins and lsp async
+    local async
+    async = vim.loop.new_async(vim.schedule_wrap(function()
+        bliss.loadTerminal()
+
+        -- imort tables for plugins and lsp
+        local plugins = bliss.loadPlugins()
+        local lsp = bliss.loadLSP()
+
+        -- loop trough the plugins table and highlight every member
+        for group, colors in pairs(plugins) do
+            util.highlight(group, colors)
+        end
+
+        -- loop trough the lsp table and highlight every member
+        for group, colors in pairs(lsp) do
+            util.highlight(group, colors)
+        end
+
+        -- if contrast is enabled, apply it to sidebars and floating windows
+        if vim.g.bliss_contrast == true then
+            util.contrast()
+        end
+        async:close()
+    end))
+
+    -- load the most importaint parts of the theme
+    local editor = bliss.loadEditor()
+    local syntax = bliss.loadSyntax()
+    local treesitter = bliss.loadTreeSitter()
+
+    -- load editor highlights
+    for group, colors in pairs(editor) do
+        util.highlight(group, colors)
     end
 
-    return rgb_to_hex(blend_channel(fg_r, bg_r), blend_channel(fg_g, bg_g), blend_channel(fg_b, bg_b))
+    -- load syntax highlights
+    for group, colors in pairs(syntax) do
+        util.highlight(group, colors)
+    end
+
+    -- loop trough the treesitter table and highlight every member
+    for group, colors in pairs(treesitter) do
+        util.highlight(group, colors)
+    end
+
+    -- load the rest later ( lsp, treesitter, plugins )
+    async:send()
 end
 
----Blend color with background
----@param color string
----@param alpha number
----@return string
-function M.blend_bg(color, alpha)
-    return M.blend(color, alpha, "#000000")
-end
-
-return M
+return util
