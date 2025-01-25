@@ -4,7 +4,7 @@ function M.get(colors, config)
     return {
         -- Base
         ["@variable"] = { fg = colors.variable, italic = config.styles.variables.italic },
-        ["@variable.builtin"] = { fg = colors.red, bold = true },
+        ["@variable.builtin"] = { fg = colors.green, bold = true },
         ["@variable.parameter"] = { fg = colors.fg },
         ["@variable.member"] = { fg = colors.blue },
 
@@ -15,23 +15,23 @@ function M.get(colors, config)
             italic = config.styles.functions.italic,
             bold = config.styles.functions.bold,
         },
-        ["@keyword.operator"] = { fg = colors.purple },
+        ["@keyword.operator"] = { fg = colors.green },
         ["@keyword.return"] = {
             fg = colors.keyword,
             italic = config.styles.keywords.italic,
             bold = config.styles.keywords.bold,
         },
         ["@keyword.conditional"] = {
-            fg = colors.purple,
+            fg = colors.green,
             italic = config.styles.keywords.italic,
             bold = config.styles.keywords.bold,
         },
         ["@keyword.repeat"] = {
-            fg = colors.purple,
+            fg = colors.green,
             italic = config.styles.keywords.italic,
             bold = config.styles.keywords.bold,
         },
-        ["@keyword.import"] = { fg = colors.purple, bold = true },
+        ["@keyword.import"] = { fg = colors.green, bold = true },
         ["@keyword.storage"] = { fg = colors.gold, bold = config.styles.types.bold },
         ["@keyword.debug"] = { fg = colors.red, bold = true },
         ["@keyword.exception"] = { fg = colors.red, bold = true },
