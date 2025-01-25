@@ -5,35 +5,35 @@ local theme = {}
 theme.loadSyntax = function()
     -- Syntax highlight groups
     local syntax = {
-        Type = { fg = bliss.bliss9_gui },                                                -- int, long, char, etc.
-        StorageClass = { fg = bliss.bliss9_gui },                                        -- static, register, volatile, etc.
-        Structure = { fg = bliss.bliss9_gui },                                           -- struct, union, enum, etc.
-        Constant = { fg = bliss.bliss4_gui },                                            -- any constant
-        String = { fg = bliss.bliss14_gui, bg = bliss.none, style = 'italic' },          -- Any string
-        Character = { fg = bliss.bliss14_gui },                                          -- any character constant: 'c', '\n'
-        Number = { fg = bliss.bliss15_gui },                                             -- a number constant: 5
-        Boolean = { fg = bliss.bliss9_gui },                                             -- a boolean constant: TRUE, false
-        Float = { fg = bliss.bliss15_gui },                                              -- a floating point constant: 2.3e10
-        Statement = { fg = bliss.bliss9_gui },                                           -- any statement
-        Label = { fg = bliss.bliss9_gui },                                               -- case, default, etc.
-        Operator = { fg = bliss.bliss9_gui },                                            -- sizeof", "+", "*", etc.
-        Exception = { fg = bliss.bliss9_gui },                                           -- try, catch, throw
-        PreProc = { fg = bliss.bliss9_gui },                                             -- generic Preprocessor
-        Include = { fg = bliss.bliss9_gui },                                             -- preprocessor #include
-        Define = { fg = bliss.bliss9_gui },                                              -- preprocessor #define
-        Macro = { fg = bliss.bliss9_gui },                                               -- same as Define
-        Typedef = { fg = bliss.bliss9_gui },                                             -- A typedef
-        PreCondit = { fg = bliss.bliss13_gui },                                          -- preprocessor #if, #else, #endif, etc.
-        Special = { fg = bliss.bliss4_gui },                                             -- any special symbol
-        SpecialChar = { fg = bliss.bliss13_gui },                                        -- special character in a constant
-        Tag = { fg = bliss.bliss4_gui },                                                 -- you can use CTRL-] on this
-        Delimiter = { fg = bliss.bliss6_gui },                                           -- character that needs attention like , or .
-        SpecialComment = { fg = bliss.bliss8_gui },                                      -- special things inside a comment
-        Debug = { fg = bliss.bliss11_gui },                                              -- debugging statements
-        Underlined = { fg = bliss.link, bg = bliss.none, style = 'underline' },          -- text that stands out, HTML links
-        Ignore = { fg = bliss.disabled },                                                -- left blank, hidden
-        Error = { fg = bliss.error, bg = bliss.none, style = 'bold,underline' },         -- any erroneous construct
-        Todo = { fg = bliss.bliss13_gui, bg = bliss.none, style = 'bold,italic' },       -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+        Type = { fg = bliss.bliss9_gui },                                          -- int, long, char, etc.
+        StorageClass = { fg = bliss.bliss9_gui },                                  -- static, register, volatile, etc.
+        Structure = { fg = bliss.bliss9_gui },                                     -- struct, union, enum, etc.
+        Constant = { fg = bliss.bliss4_gui },                                      -- any constant
+        String = { fg = bliss.bliss14_gui, bg = bliss.none, style = 'italic' },    -- Any string
+        Character = { fg = bliss.bliss14_gui },                                    -- any character constant: 'c', '\n'
+        Number = { fg = bliss.bliss15_gui },                                       -- a number constant: 5
+        Boolean = { fg = bliss.bliss9_gui },                                       -- a boolean constant: TRUE, false
+        Float = { fg = bliss.bliss15_gui },                                        -- a floating point constant: 2.3e10
+        Statement = { fg = bliss.bliss9_gui },                                     -- any statement
+        Label = { fg = bliss.bliss9_gui },                                         -- case, default, etc.
+        Operator = { fg = bliss.bliss9_gui },                                      -- sizeof", "+", "*", etc.
+        Exception = { fg = bliss.bliss9_gui },                                     -- try, catch, throw
+        PreProc = { fg = bliss.bliss9_gui },                                       -- generic Preprocessor
+        Include = { fg = bliss.bliss9_gui },                                       -- preprocessor #include
+        Define = { fg = bliss.bliss9_gui },                                        -- preprocessor #define
+        Macro = { fg = bliss.bliss9_gui },                                         -- same as Define
+        Typedef = { fg = bliss.bliss9_gui },                                       -- A typedef
+        PreCondit = { fg = bliss.bliss13_gui },                                    -- preprocessor #if, #else, #endif, etc.
+        Special = { fg = bliss.bliss4_gui },                                       -- any special symbol
+        SpecialChar = { fg = bliss.bliss13_gui },                                  -- special character in a constant
+        Tag = { fg = bliss.bliss4_gui },                                           -- you can use CTRL-] on this
+        Delimiter = { fg = bliss.bliss6_gui },                                     -- character that needs attention like , or .
+        SpecialComment = { fg = bliss.bliss8_gui },                                -- special things inside a comment
+        Debug = { fg = bliss.bliss11_gui },                                        -- debugging statements
+        Underlined = { fg = bliss.link, bg = bliss.none, style = 'underline' },    -- text that stands out, HTML links
+        Ignore = { fg = bliss.disabled },                                          -- left blank, hidden
+        Error = { fg = bliss.error, bg = bliss.none, style = 'bold,underline' },   -- any erroneous construct
+        Todo = { fg = bliss.bliss13_gui, bg = bliss.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
         Conceal = { fg = bliss.none, bg = bliss.bg },
 
 
@@ -51,12 +51,12 @@ theme.loadSyntax = function()
         markdownH3Delimiter = { fg = bliss.bliss14_gui },
     }
 
-    syntax.Comment = { fg = bliss.bliss3_gui }
-    syntax.Conditional = { fg = bliss.bliss9_gui }  -- normal if, then, else, endif, switch, etc.
-    syntax.Keyword = { fg = bliss.bliss9_gui }      -- normal for, do, while, etc.
-    syntax.Repeat = { fg = bliss.bliss9_gui }       -- normal any other keyword
+    syntax.Comment = { fg = bliss.comments }
+    syntax.Conditional = { fg = bliss.bliss11_gui } -- normal if, then, else, endif, switch, etc.
+    syntax.Keyword = { fg = bliss.bliss11_gui }     -- normal for, do, while, etc.
+    syntax.Repeat = { fg = bliss.bliss11_gui }      -- normal any other keyword
     syntax.Function = { fg = bliss.bliss8_gui }
-    syntax.Identifier = { fg = bliss.bliss9_gui };  -- any variable name
+    syntax.Identifier = { fg = bliss.error };       -- any variable name
 
     return syntax
 end
@@ -66,16 +66,16 @@ theme.loadEditor = function()
     -- Editor highlight groups
 
     local editor = {
-        NormalFloat = { fg = bliss.fg, bg = bliss.float },                             -- normal text and background color
-        ColorColumn = { fg = bliss.none, bg = bliss.bliss1_gui },                      --  used for the columns set with 'colorcolumn'
-        Conceal = { fg = bliss.disabled },                                             -- placeholder characters substituted for concealed text (see 'conceallevel')
-        Cursor = { fg = bliss.bliss4_gui, bg = bliss.none, style = 'reverse' },        -- the character under the cursor
-        CursorIM = { fg = bliss.cursor, bg = bliss.none, style = 'reverse' },          -- like Cursor, but used when in IME mode
-        Directory = { fg = bliss.bliss7_gui, bg = bliss.none },                        -- directory names (and other special names in listings)
-        DiffAdd = { fg = bliss.bliss14_gui, bg = bliss.none, style = 'reverse' },      -- diff mode: Added line
-        DiffChange = { fg = bliss.bliss12_gui, bg = bliss.none, style = 'reverse' },   --  diff mode: Changed line
-        DiffDelete = { fg = bliss.bliss11_gui, bg = bliss.none, style = 'reverse' },   -- diff mode: Deleted line
-        DiffText = { fg = bliss.bliss15_gui, bg = bliss.none, style = 'reverse' },     -- diff mode: Changed text within a changed line
+        NormalFloat = { fg = bliss.fg, bg = bliss.float },                           -- normal text and background color
+        ColorColumn = { fg = bliss.none, bg = bliss.bliss1_gui },                    --  used for the columns set with 'colorcolumn'
+        Conceal = { fg = bliss.disabled },                                           -- placeholder characters substituted for concealed text (see 'conceallevel')
+        Cursor = { fg = bliss.bliss4_gui, bg = bliss.none, style = 'reverse' },      -- the character under the cursor
+        CursorIM = { fg = bliss.cursor, bg = bliss.none, style = 'reverse' },        -- like Cursor, but used when in IME mode
+        Directory = { fg = bliss.bliss7_gui, bg = bliss.none },                      -- directory names (and other special names in listings)
+        DiffAdd = { fg = bliss.bliss14_gui, bg = bliss.none, style = 'reverse' },    -- diff mode: Added line
+        DiffChange = { fg = bliss.bliss12_gui, bg = bliss.none, style = 'reverse' }, --  diff mode: Changed line
+        DiffDelete = { fg = bliss.bliss11_gui, bg = bliss.none, style = 'reverse' }, -- diff mode: Deleted line
+        DiffText = { fg = bliss.bliss15_gui, bg = bliss.none, style = 'reverse' },   -- diff mode: Changed text within a changed line
         EndOfBuffer = { fg = bliss.disabled },
         ErrorMsg = { fg = bliss.none },
         Folded = { fg = bliss.disabled, bliss.none, style = 'italic' },
@@ -179,59 +179,59 @@ theme.loadTreeSitter = function()
     -- TreeSitter highlight groups
 
     local treesitter = {
-        TSAnnotation = { fg = bliss.bliss12_gui },                                     -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
-        TSCharacter = { fg = bliss.bliss14_gui },                                      -- For characters.
-        TSConstructor = { fg = bliss.bliss9_gui },                                     -- For constructor calls and definitions: `=                                                                          { }` in Lua, and Java constructors.
-        TSConstant = { fg = bliss.bliss13_gui },                                       -- For constants
-        TSFloat = { fg = bliss.bliss15_gui },                                          -- For floats
-        TSNumber = { fg = bliss.bliss15_gui },                                         -- For all number
-        TSString = { fg = bliss.bliss14_gui },                                         -- For strings.
+        TSAnnotation = { fg = bliss.bliss12_gui },                             -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
+        TSCharacter = { fg = bliss.bliss14_gui },                              -- For characters.
+        TSConstructor = { fg = bliss.bliss9_gui },                             -- For constructor calls and definitions: `=                                                                          { }` in Lua, and Java constructors.
+        TSConstant = { fg = bliss.bliss13_gui },                               -- For constants
+        TSFloat = { fg = bliss.bliss15_gui },                                  -- For floats
+        TSNumber = { fg = bliss.bliss15_gui },                                 -- For all number
+        TSString = { fg = bliss.bliss14_gui },                                 -- For strings.
 
-        TSAttribute = { fg = bliss.bliss15_gui },                                      -- (unstable) TODO: docs
-        TSBoolean = { fg = bliss.bliss9_gui },                                         -- For booleans.
-        TSConstBuiltin = { fg = bliss.bliss7_gui },                                    -- For constant that are built in the language: `nil` in Lua.
-        TSConstMacro = { fg = bliss.bliss7_gui },                                      -- For constants that are defined by macros: `NULL` in C.
-        TSError = { fg = bliss.error },                                                -- For syntax/parser errors.
-        TSException = { fg = bliss.bliss15_gui },                                      -- For exception related keywords.
-        TSField = { fg = bliss.bliss4_gui },                                           -- For fields.
-        TSFuncMacro = { fg = bliss.bliss7_gui },                                       -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-        TSInclude = { fg = bliss.bliss9_gui },                                         -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-        TSLabel = { fg = bliss.bliss15_gui },                                          -- For labels: `label:` in C and `:label:` in Lua.
-        TSNamespace = { fg = bliss.bliss4_gui },                                       -- For identifiers referring to modules and namespaces.
-        TSOperator = { fg = bliss.bliss9_gui },                                        -- For any operator: `+`, but also `->` and `*` in C.
-        TSParameter = { fg = bliss.bliss10_gui },                                      -- For parameters of a function.
-        TSParameterReference = { fg = bliss.bliss10_gui },                             -- For references to parameters of a function.
-        TSProperty = { fg = bliss.bliss10_gui },                                       -- Same as `TSField`.
-        TSPunctDelimiter = { fg = bliss.bliss8_gui },                                  -- For delimiters ie: `.`
-        TSPunctBracket = { fg = bliss.bliss8_gui },                                    -- For brackets and parens.
-        TSPunctSpecial = { fg = bliss.bliss8_gui },                                    -- For special punctutation that does not fall in the catagories before.
-        TSStringRegex = { fg = bliss.bliss7_gui },                                     -- For regexes.
-        TSStringEscape = { fg = bliss.disabled },                                      -- For escape characters within a string.
-        TSSymbol = { fg = bliss.bliss15_gui },                                         -- For identifiers referring to symbols or atoms.
-        TSType = { fg = bliss.bliss9_gui },                                            -- For types.
-        TSTypeBuiltin = { fg = bliss.bliss9_gui },                                     -- For builtin types.
-        TSTag = { fg = bliss.bliss4_gui },                                             -- Tags like html tag names.
-        TSTagDelimiter = { fg = bliss.bliss15_gui },                                   -- Tag delimiter like `<` `>` `/`
-        TSText = { fg = bliss.text },                                                  -- For strings considebliss11_gui text in a markup language.
-        TSTextReference = { fg = bliss.bliss15_gui },                                  -- FIXME
-        TSEmphasis = { fg = bliss.bliss10_gui },                                       -- For text to be represented with emphasis.
-        TSUnderline = { fg = bliss.fg, bg = bliss.none, style = 'underline' },         -- For text to be represented with an underline.
-        TSStrike = {},                                                                 -- For strikethrough text.
-        TSTitle = { fg = bliss.bliss10_gui, bg = bliss.none, style = 'bold' },         -- Text that is part of a title.
-        TSLiteral = { fg = bliss.fg },                                                 -- Literal text.
-        TSURI = { fg = bliss.link },                                                   -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = bliss.bliss11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+        TSAttribute = { fg = bliss.bliss15_gui },                              -- (unstable) TODO: docs
+        TSBoolean = { fg = bliss.bliss9_gui },                                 -- For booleans.
+        TSConstBuiltin = { fg = bliss.bliss7_gui },                            -- For constant that are built in the language: `nil` in Lua.
+        TSConstMacro = { fg = bliss.bliss7_gui },                              -- For constants that are defined by macros: `NULL` in C.
+        TSError = { fg = bliss.error },                                        -- For syntax/parser errors.
+        TSException = { fg = bliss.bliss15_gui },                              -- For exception related keywords.
+        TSField = { fg = bliss.bliss4_gui },                                   -- For fields.
+        TSFuncMacro = { fg = bliss.bliss7_gui },                               -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+        TSInclude = { fg = bliss.bliss9_gui },                                 -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+        TSLabel = { fg = bliss.bliss15_gui },                                  -- For labels: `label:` in C and `:label:` in Lua.
+        TSNamespace = { fg = bliss.bliss4_gui },                               -- For identifiers referring to modules and namespaces.
+        TSOperator = { fg = bliss.bliss9_gui },                                -- For any operator: `+`, but also `->` and `*` in C.
+        TSParameter = { fg = bliss.bliss10_gui },                              -- For parameters of a function.
+        TSParameterReference = { fg = bliss.bliss10_gui },                     -- For references to parameters of a function.
+        TSProperty = { fg = bliss.bliss10_gui },                               -- Same as `TSField`.
+        TSPunctDelimiter = { fg = bliss.bliss8_gui },                          -- For delimiters ie: `.`
+        TSPunctBracket = { fg = bliss.bliss8_gui },                            -- For brackets and parens.
+        TSPunctSpecial = { fg = bliss.bliss8_gui },                            -- For special punctutation that does not fall in the catagories before.
+        TSStringRegex = { fg = bliss.bliss7_gui },                             -- For regexes.
+        TSStringEscape = { fg = bliss.disabled },                              -- For escape characters within a string.
+        TSSymbol = { fg = bliss.bliss15_gui },                                 -- For identifiers referring to symbols or atoms.
+        TSType = { fg = bliss.bliss9_gui },                                    -- For types.
+        TSTypeBuiltin = { fg = bliss.bliss9_gui },                             -- For builtin types.
+        TSTag = { fg = bliss.bliss4_gui },                                     -- Tags like html tag names.
+        TSTagDelimiter = { fg = bliss.bliss15_gui },                           -- Tag delimiter like `<` `>` `/`
+        TSText = { fg = bliss.text },                                          -- For strings considebliss11_gui text in a markup language.
+        TSTextReference = { fg = bliss.bliss15_gui },                          -- FIXME
+        TSEmphasis = { fg = bliss.bliss10_gui },                               -- For text to be represented with emphasis.
+        TSUnderline = { fg = bliss.fg, bg = bliss.none, style = 'underline' }, -- For text to be represented with an underline.
+        TSStrike = {},                                                         -- For strikethrough text.
+        TSTitle = { fg = bliss.bliss10_gui, bg = bliss.none, style = 'bold' }, -- Text that is part of a title.
+        TSLiteral = { fg = bliss.fg },                                         -- Literal text.
+        TSURI = { fg = bliss.link },                                           -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = bliss.bliss11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 
     }
 
     treesitter.TSComment = { fg = bliss.bliss3_gui }
-    treesitter.TSConditional = { fg = bliss.bliss9_gui }   -- For keywords related to conditionnals.
-    treesitter.TSKeyword = { fg = bliss.bliss9_gui }       -- For keywords that don't fall in previous categories.
-    treesitter.TSRepeat = { fg = bliss.bliss9_gui }        -- For keywords related to loops.
+    treesitter.TSConditional = { fg = bliss.bliss9_gui } -- For keywords related to conditionnals.
+    treesitter.TSKeyword = { fg = bliss.bliss9_gui }     -- For keywords that don't fall in previous categories.
+    treesitter.TSRepeat = { fg = bliss.bliss9_gui }      -- For keywords related to loops.
     treesitter.TSKeywordFunction = { fg = bliss.bliss8_gui }
-    treesitter.TSFunction = { fg = bliss.bliss8_gui }      -- For fuction (calls and definitions).
-    treesitter.TSMethod = { fg = bliss.bliss7_gui }        -- For method calls and definitions.
+    treesitter.TSFunction = { fg = bliss.bliss8_gui }    -- For fuction (calls and definitions).
+    treesitter.TSMethod = { fg = bliss.bliss7_gui }      -- For method calls and definitions.
     treesitter.TSFuncBuiltin = { fg = bliss.bliss8_gui }
-    treesitter.TSVariable = { fg = bliss.accent }          -- Any variable name that does not have another highlight.
+    treesitter.TSVariable = { fg = bliss.accent }        -- Any variable name that does not have another highlight.
     treesitter.TSVariableBuiltin = { fg = bliss.accent }
 
     return treesitter
@@ -241,29 +241,29 @@ theme.loadLSP = function()
     -- Lsp highlight groups
 
     local lsp = {
-        LspDiagnosticsDefaultError = { fg = bliss.error },                                  -- used for "Error" diagnostic virtual text
-        LspDiagnosticsSignError = { fg = bliss.error },                                     -- used for "Error" diagnostic signs in sign column
-        LspDiagnosticsFloatingError = { fg = bliss.error },                                 -- used for "Error" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextError = { fg = bliss.error },                              -- Virtual text "Error"
-        LspDiagnosticsUnderlineError = { style = 'undercurl', sp = bliss.error },           -- used to underline "Error" diagnostics.
-        LspDiagnosticsDefaultWarning = { fg = bliss.bliss15_gui },                          -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsSignWarning = { fg = bliss.bliss15_gui },                             -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsFloatingWarning = { fg = bliss.bliss15_gui },                         -- used for "Warning" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextWarning = { fg = bliss.bliss15_gui },                      -- Virtual text "Warning"
-        LspDiagnosticsUnderlineWarning = { style = 'undercurl', sp = bliss.bliss15_gui },   -- used to underline "Warning" diagnostics.
-        LspDiagnosticsDefaultInformation = { fg = bliss.bliss10_gui },                      -- used for "Information" diagnostic virtual text
-        LspDiagnosticsSignInformation = { fg = bliss.bliss10_gui },                         -- used for "Information" diagnostic signs in sign column
-        LspDiagnosticsFloatingInformation = { fg = bliss.bliss10_gui },                     -- used for "Information" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextInformation = { fg = bliss.bliss10_gui },                  -- Virtual text "Information"
+        LspDiagnosticsDefaultError = { fg = bliss.error },                                    -- used for "Error" diagnostic virtual text
+        LspDiagnosticsSignError = { fg = bliss.error },                                       -- used for "Error" diagnostic signs in sign column
+        LspDiagnosticsFloatingError = { fg = bliss.error },                                   -- used for "Error" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextError = { fg = bliss.error },                                -- Virtual text "Error"
+        LspDiagnosticsUnderlineError = { style = 'undercurl', sp = bliss.error },             -- used to underline "Error" diagnostics.
+        LspDiagnosticsDefaultWarning = { fg = bliss.bliss15_gui },                            -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsSignWarning = { fg = bliss.bliss15_gui },                               -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsFloatingWarning = { fg = bliss.bliss15_gui },                           -- used for "Warning" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextWarning = { fg = bliss.bliss15_gui },                        -- Virtual text "Warning"
+        LspDiagnosticsUnderlineWarning = { style = 'undercurl', sp = bliss.bliss15_gui },     -- used to underline "Warning" diagnostics.
+        LspDiagnosticsDefaultInformation = { fg = bliss.bliss10_gui },                        -- used for "Information" diagnostic virtual text
+        LspDiagnosticsSignInformation = { fg = bliss.bliss10_gui },                           -- used for "Information" diagnostic signs in sign column
+        LspDiagnosticsFloatingInformation = { fg = bliss.bliss10_gui },                       -- used for "Information" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextInformation = { fg = bliss.bliss10_gui },                    -- Virtual text "Information"
         LspDiagnosticsUnderlineInformation = { style = 'undercurl', sp = bliss.bliss10_gui }, -- used to underline "Information" diagnostics.
-        LspDiagnosticsDefaultHint = { fg = bliss.bliss9_gui },                              -- used for "Hint" diagnostic virtual text
-        LspDiagnosticsSignHint = { fg = bliss.bliss9_gui },                                 -- used for "Hint" diagnostic signs in sign column
-        LspDiagnosticsFloatingHint = { fg = bliss.bliss9_gui },                             -- used for "Hint" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextHint = { fg = bliss.bliss9_gui },                          -- Virtual text "Hint"
-        LspDiagnosticsUnderlineHint = { style = 'undercurl', sp = bliss.bliss10_gui },      -- used to underline "Hint" diagnostics.
-        LspReferenceText = { fg = bliss.accent, bg = bliss.highlight },                     -- used for highlighting "text" references
-        LspReferenceRead = { fg = bliss.accent, bg = bliss.highlight },                     -- used for highlighting "read" references
-        LspReferenceWrite = { fg = bliss.accent, bg = bliss.highlight },                    -- used for highlighting "write" references
+        LspDiagnosticsDefaultHint = { fg = bliss.bliss9_gui },                                -- used for "Hint" diagnostic virtual text
+        LspDiagnosticsSignHint = { fg = bliss.bliss9_gui },                                   -- used for "Hint" diagnostic signs in sign column
+        LspDiagnosticsFloatingHint = { fg = bliss.bliss9_gui },                               -- used for "Hint" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextHint = { fg = bliss.bliss9_gui },                            -- Virtual text "Hint"
+        LspDiagnosticsUnderlineHint = { style = 'undercurl', sp = bliss.bliss10_gui },        -- used to underline "Hint" diagnostics.
+        LspReferenceText = { fg = bliss.accent, bg = bliss.highlight },                       -- used for highlighting "text" references
+        LspReferenceRead = { fg = bliss.accent, bg = bliss.highlight },                       -- used for highlighting "read" references
+        LspReferenceWrite = { fg = bliss.accent, bg = bliss.highlight },                      -- used for highlighting "write" references
     }
 
     return lsp
@@ -299,18 +299,18 @@ theme.loadPlugins = function()
         NeogitDiffAddHighlight = { fg = bliss.bliss14_gui },
 
         -- GitGutter
-        GitGutterAdd = { fg = bliss.bliss14_gui }, -- diff mode: Added line |diff.txt|
+        GitGutterAdd = { fg = bliss.bliss14_gui },    -- diff mode: Added line |diff.txt|
         GitGutterChange = { fg = bliss.bliss15_gui }, -- diff mode: Changed line |diff.txt|
         GitGutterDelete = { fg = bliss.bliss11_gui }, -- diff mode: Deleted line |diff.txt|
 
         -- GitSigns
-        GitSignsAdd = { fg = bliss.bliss14_gui },  -- diff mode: Added line |diff.txt|
-        GitSignsAddNr = { fg = bliss.bliss14_gui }, -- diff mode: Added line |diff.txt|
-        GitSignsAddLn = { fg = bliss.bliss14_gui }, -- diff mode: Added line |diff.txt|
-        GitSignsChange = { fg = bliss.bliss15_gui }, -- diff mode: Changed line |diff.txt|
+        GitSignsAdd = { fg = bliss.bliss14_gui },      -- diff mode: Added line |diff.txt|
+        GitSignsAddNr = { fg = bliss.bliss14_gui },    -- diff mode: Added line |diff.txt|
+        GitSignsAddLn = { fg = bliss.bliss14_gui },    -- diff mode: Added line |diff.txt|
+        GitSignsChange = { fg = bliss.bliss15_gui },   -- diff mode: Changed line |diff.txt|
         GitSignsChangeNr = { fg = bliss.bliss15_gui }, -- diff mode: Changed line |diff.txt|
         GitSignsChangeLn = { fg = bliss.bliss15_gui }, -- diff mode: Changed line |diff.txt|
-        GitSignsDelete = { fg = bliss.bliss11_gui }, -- diff mode: Deleted line |diff.txt|
+        GitSignsDelete = { fg = bliss.bliss11_gui },   -- diff mode: Deleted line |diff.txt|
         GitSignsDeleteNr = { fg = bliss.bliss11_gui }, -- diff mode: Deleted line |diff.txt|
         GitSignsDeleteLn = { fg = bliss.bliss11_gui }, -- diff mode: Deleted line |diff.txt|
 

@@ -1,7 +1,7 @@
 local bliss = {
     --16 colors
     bliss0_gui = "#1c1b1d",
-    bliss1_gui = "#262727",
+    bliss1_gui = "#635050",
     bliss2_gui = "#313238",
     bliss3_gui = "#434545",
     bliss4_gui = "#9DACDE",
@@ -21,14 +21,14 @@ local bliss = {
     bg_alt = '#262727',
     fg = '#F0D3C9',
     text = '#9DACDE',
-    comments = '#434545',
-    selection = '#262727',
+    comments = '#635050',
+    selection = '#302E31',
     contrast = '#313238',
     active = '#DED09D',
     border = '#262727',
-    line_numbers = '#434545',
-    highlight = '#262727',
-    disabled = '#262727',
+    line_numbers = '#635050',
+    highlight = '#635050',
+    disabled = '#635050',
     cursor = '#F0D3C9',
     accent = '#9DACDE',
 
