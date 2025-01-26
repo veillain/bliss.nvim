@@ -1,7 +1,7 @@
 local bliss = {
     --16 colors
     bliss0_gui = "#1c1b1d",
-    bliss1_gui = "#635050",
+    bliss1_gui = "#262727",
     bliss2_gui = "#313238",
     bliss3_gui = "#434545",
     bliss4_gui = "#9DACDE",
