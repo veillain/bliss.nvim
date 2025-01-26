@@ -2,10 +2,10 @@
 
 " UI based settings
 
-let &t_0f = "\<esc>[30;2;%lu,%lu;%lum"      " allows termguicolors to work
+let &t_8f = "\<Esc>[30;2;%lu,%lu;%lum"      " allows termguicolors to work
 
 
-let &t_8b = "\<esc>[48;2;%lu,%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu,%lu;%lum"
 set termguicolors
 set background=dark
 syntax on
