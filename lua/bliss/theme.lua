@@ -25,7 +25,7 @@ theme.loadSyntax = function()
         Typedef = { fg = bliss.bliss9_gui },                                       -- A typedef
         PreCondit = { fg = bliss.bliss13_gui },                                    -- preprocessor #if, #else, #endif, etc.
         Special = { fg = bliss.error },                                            -- any special symbol
-        SpecialChar = { fg = bliss.bliss10_gui },                                  -- special character in a constant <C-J>
+        SpecialChar = { fg = bliss.bliss4_gui },                                   -- special character in a constant <C-J>
         Tag = { fg = bliss.bliss4_gui },                                           -- you can use CTRL-] on this
         Delimiter = { fg = bliss.bliss9_gui },                                     -- character that needs attention like , or .
         SpecialComment = { fg = bliss.bliss8_gui },                                -- special things inside a comment
@@ -52,11 +52,11 @@ theme.loadSyntax = function()
     }
 
     syntax.Comment = { fg = bliss.comments, style = "italic" }
-    syntax.Conditional = { fg = bliss.bliss12_gui } -- normal if, then, else, endif, switch, etc.
-    syntax.Keyword = { fg = bliss.bliss12_gui }     -- normal for, do, while, etc.
-    syntax.Repeat = { fg = bliss.bliss12_gui }      -- normal any other keyword
+    syntax.Conditional = { fg = bliss.bliss12_gui, style = "bold" } -- normal if, then, else, endif, switch, etc.
+    syntax.Keyword = { fg = bliss.bliss12_gui, style = "bold" }     -- normal for, do, while, etc.
+    syntax.Repeat = { fg = bliss.bliss12_gui, style = "bold" }      -- normal any other keyword
     syntax.Function = { fg = bliss.bliss8_gui }
-    syntax.Identifier = { fg = bliss.error };       -- any variable name
+    syntax.Identifier = { fg = bliss.error };                       -- any variable name
 
     return syntax
 end
