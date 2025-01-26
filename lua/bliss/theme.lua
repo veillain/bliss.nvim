@@ -52,9 +52,9 @@ theme.loadSyntax = function()
     }
 
     syntax.Comment = { fg = bliss.comments, style = "italic" }
-    syntax.Conditional = { fg = bliss.bliss11_gui } -- normal if, then, else, endif, switch, etc.
-    syntax.Keyword = { fg = bliss.bliss11_gui }     -- normal for, do, while, etc.
-    syntax.Repeat = { fg = bliss.bliss11_gui }      -- normal any other keyword
+    syntax.Conditional = { fg = bliss.bliss12_gui } -- normal if, then, else, endif, switch, etc.
+    syntax.Keyword = { fg = bliss.bliss12_gui }     -- normal for, do, while, etc.
+    syntax.Repeat = { fg = bliss.bliss12_gui }      -- normal any other keyword
     syntax.Function = { fg = bliss.bliss8_gui }
     syntax.Identifier = { fg = bliss.error };       -- any variable name
 
