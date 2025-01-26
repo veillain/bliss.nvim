@@ -101,16 +101,16 @@ theme.loadEditor = function()
         SpellLocal = { fg = bliss.bliss8_gui, bg = bliss.none, style = 'italic,undercurl' },
         SpellRare = { fg = bliss.bliss9_gui, bg = bliss.none, style = 'italic,undercurl' },
         StatusLine = { fg = bliss.fg, bg = bliss.contrast },
-        StatusLineNC = { fg = bliss.text, bg = bliss.disabled },
+        StatusLineNC = { fg = bliss.fg, bg = bliss.border },
         StatusLineTerm = { fg = bliss.fg, bg = bliss.contrast },
-        StatusLineTermNC = { fg = bliss.text, bg = bliss.disabled },
+        StatusLineTermNC = { fg = bliss.fg, bg = bliss.border },
         TabLineFill = { fg = bliss.fg },
-        TablineSel = { fg = bliss.bliss8_gui, bg = bliss.bliss3_gui },
-        Tabline = { fg = bliss.fg },
+        TablineSel = { fg = bliss.fg, bg = bliss.contrast },
+        Tabline = { fg = bliss.comments, bg = bliss.bg_alt },
         Title = { fg = bliss.bliss14_gui, bg = bliss.none, style = 'bold' },
         Visual = { fg = bliss.none, bg = bliss.selection },
         VisualNOS = { fg = bliss.none, bg = bliss.selection },
-        WarningMsg = { fg = bliss.bliss15_gui },
+        WarningMsg = { fg = bliss.error },
         WildMenu = { fg = bliss.bliss12_gui, bg = bliss.none, style = 'bold' },
         CursorColumn = { fg = bliss.none, bg = bliss.active },
         CursorLine = { fg = bliss.none, bg = bliss.cursorlinefg },
@@ -157,22 +157,22 @@ theme.loadEditor = function()
 end
 
 theme.loadTerminal = function()
-    vim.g.terminal_color_0 = bliss.bliss1_gui
-    vim.g.terminal_color_1 = bliss.bliss11_gui
-    vim.g.terminal_color_2 = bliss.bliss14_gui
-    vim.g.terminal_color_3 = bliss.bliss13_gui
-    vim.g.terminal_color_4 = bliss.bliss9_gui
-    vim.g.terminal_color_5 = bliss.bliss15_gui
-    vim.g.terminal_color_6 = bliss.bliss8_gui
-    vim.g.terminal_color_7 = bliss.bliss5_gui
+    vim.g.terminal_color_0 = bliss.bliss0_gui
+    vim.g.terminal_color_1 = bliss.error
+    vim.g.terminal_color_2 = bliss.bliss11_gui
+    vim.g.terminal_color_3 = bliss.bliss9_gui
+    vim.g.terminal_color_4 = bliss.bliss4_gui
+    vim.g.terminal_color_5 = bliss.bliss13_gui
+    vim.g.terminal_color_6 = bliss.bliss12_gui
+    vim.g.terminal_color_7 = bliss.bliss7_gui
     vim.g.terminal_color_8 = bliss.bliss3_gui
-    vim.g.terminal_color_9 = bliss.bliss11_gui
-    vim.g.terminal_color_10 = bliss.bliss14_gui
-    vim.g.terminal_color_11 = bliss.bliss13_gui
-    vim.g.terminal_color_12 = bliss.bliss9_gui
-    vim.g.terminal_color_13 = bliss.bliss15_gui
-    vim.g.terminal_color_14 = bliss.bliss7_gui
-    vim.g.terminal_color_15 = bliss.bliss6_gui
+    vim.g.terminal_color_9 = bliss.error
+    vim.g.terminal_color_10 = bliss.bliss11_gui
+    vim.g.terminal_color_11 = bliss.bliss9_gui
+    vim.g.terminal_color_12 = bliss.bliss4_gui
+    vim.g.terminal_color_13 = bliss.bliss13_gui
+    vim.g.terminal_color_14 = bliss.bliss12_gui
+    vim.g.terminal_color_15 = bliss.bliss7_gui
 end
 
 theme.loadTreeSitter = function()
