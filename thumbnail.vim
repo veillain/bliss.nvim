@@ -8,7 +8,7 @@ let &t_0f = "\<esc>[30;2;%lu,%lu;%lum"      " allows termguicolors to work
 let &t_8b = "\<esc>[48;2;%lu,%lu;%lum"
 set termguicolors
 set background=dark
-syntax on 
+syntax on
 colorscheme bliss
 set ruler
 set number relativenumber
