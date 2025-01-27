@@ -11,7 +11,7 @@
 
 <p align="center"
 
-![img](assets/neovim.png)
+![img](assets/thumbnail.png)
 ![img](assets/colorpallete.png)
 
 </p>
