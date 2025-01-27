@@ -1,6 +1,7 @@
 -- Colorscheme name:    bliss.nvim
 -- Description:         Port of articicestudio's bliss theme for neovim
--- Author:              https://github.com/shaunsingh
+-- Original Author:     https://github.com/shaunsingh
+-- Fork Author:         https://github.com/veillain
 
 local util = require('bliss.util')
 
