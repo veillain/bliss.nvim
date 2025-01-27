@@ -11,8 +11,8 @@
 
 <p align="center"
 
-![img](scrots/neovim.png)
-![img](scrots/colorpallete.png)
+![img](assets/neovim.png)
+![img](assets/colorpallete.png)
 
 </p>
 
